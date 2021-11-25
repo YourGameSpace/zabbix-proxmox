@@ -145,7 +145,7 @@ if args.discovery:
         print(discovery_data)
     try:
         result = subprocess.check_output([
-            args.zsend, "-c " + args.config, "-s " + args.target,
+            args.zsend, "-c" + args.config, "-s " + args.target,
             "-k " + "proxmox.nodes.discovery", "-o " + str(discovery_data)
         ])
     except Exception as error:  # pylint: disable=broad-except
